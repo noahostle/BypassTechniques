@@ -1,6 +1,0 @@
-as soon as main.exe reaches disk, Windows Defender picks it up and quarantines it
-however since emptyshellcode.exe does not contain any shellcode, it can run without
-defender interference, therefore, it is the shellcode that is being detected, not the
-code for the stager itself.
-
-Obfuscating out the shellcode may lead to better results...

@@ -1,9 +1,0 @@
-Compile the code and run it, Defender will snipe it off the disk as soon as it leaves gcc's warm embrace.
-
-I couldnt even get this code to run with a nop sled as the shellcode, lucky our ablation study executes
-this as shellcode in memory!
-
-Windows Defender cant get its grubby little hands on the shellcode when its being downloaded from the 
-internet and run in memory.
-
-Fileless malware baby!
