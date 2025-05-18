@@ -1,0 +1,22 @@
+First, compile all the files:
+
+    gcc command.c -o command.exe
+    gcc crypter.c -o crypter.exe
+    gcc stub.c -o stub.exe
+
+Then, execute crypter.exe with the following command, using "encrypted" as the encrypted file, and "6969" as the key:
+
+    .\crypter.exe [malicious exe] [encrypted file] [key]
+    .\crypter.exe command.exe encrypted 6969
+
+Note that these arguments can be changed, at which point you must update the macros in stub.c to reflect such a change.
+
+Finally, run the stub executable. Note that a user must have "encrypted" and "stub.exe" on their machine.
+These files can absolutely be combined into one, but for the purposes of demonstration this is not necessary.
+
+    .\stub.exe
+
+This will decrypt the encrypted file, and execute whatever is inside. Our malicious file is "command.exe", 
+and currently it just executes a simple system call to echo Hello World to the console.
+If you wish to insert a malicious payload, "command.c" is where you would do it.
+If you wish to encrypt an existing executable, then place it in the folder and modify the command to run .\crypter.exe, as above.
